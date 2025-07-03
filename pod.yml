@@ -1,0 +1,10 @@
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: transaction-pod 
+spec: 
+  containers:
+    - name: test-container 
+      image: muralisocial123/transaction:v1
+      ports: 
+        - containerPort: 3000
