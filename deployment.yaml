@@ -1,0 +1,19 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: transaction-deployment 
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: example-container
+        image: muralisocial123/transaction:v1
+        ports:
+        - containerPort: 3000
